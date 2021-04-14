@@ -9,6 +9,10 @@
     scroll-behavior: smooth;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 #section_info:target {
     scroll-margin-top: 300px;
 }
@@ -88,6 +92,7 @@ header {
 hr {
     border: 1px solid #FFAF00;
     margin: 20px 0;
+    width: 41vw;
 }
 
 .container_texto_banner span {
@@ -254,4 +259,52 @@ footer span {
     font-size: 18px;
     color: white;
     text-transform: capitalize;
+}
+
+@media(max-width:420px) {
+
+    .grid{
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    .container_banner {
+        display: flex;
+        justify-content: center;
+        height: 680px;
+
+    }
+
+    .img_fundo_banner {
+        height: 680px;
+        width: auto;
+    }
+
+    .container_texto_banner{
+        left: 7%;
+        top: 165px;
+    }
+
+    .container_texto_banner h1 {
+        font-size: 65px;
+        width: 90vw;
+        height: auto;
+
+    }
+
+    hr {
+        width: 87vw;
+        margin: 40px 0;
+    }
+
+    .container_texto_banner span {
+        font-size: 37px;
+        margin-bottom: 40px;
+    }
+
+    .container_texto_banner img {
+        width: auto;
+        height: 100px;
+    }
+
 }
