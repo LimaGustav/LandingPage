@@ -6,18 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
+    <script src="https://kit.fontawesome.com/5cb58d0d07.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <header>
         <div class="grid container_nav">
-            <nav class="nav_header">
-                <a href="#section_banner">inicio</a>
-                <a href="#section_sobre">sobre</a>
-                <a href="#section_info">desafios</a>
-                <a href="#section_end">endereço</a>
+            <nav id="links" class="nav_header">
+                <a href="#section_banner" onclick="botaoMenu()">inicio</a>
+                <a href="#section_sobre" onclick="botaoMenu()">sobre</a>
+                <a href="#section_info" onclick="botaoMenu()">desafios</a>
+                <a href="#section_end" onclick="botaoMenu()">endereço</a>
             </nav>
+            
+            <a class="btn_menu" href="#" onclick="botaoMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
         </div>
     </header>
 
@@ -89,6 +94,21 @@
         <span>copyright © 2020 - escola senai de informática
         </span>
     </footer>
+
+
+    <script>
+        function botaoMenu() {
+            var menu = document.getElementById("links");
+            if (menu.style.display === "flex") {
+                //Escoder o menu
+                menu.style.display = "none"
+            } else {
+                //Mostrar menu
+                menu.style.display = "flex"
+            }
+        }
+    </script>
+
 </body>
 
 </html>
